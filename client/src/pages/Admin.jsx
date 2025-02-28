@@ -31,8 +31,8 @@ const Admin = () => {
   const fetchLogsAndStudents = async () => {
     try {
       const [logsRes, studentsRes] = await Promise.all([
-        axios.get(`${SERVER_URI}/api/logs`),
-        axios.get(`${SERVER_URI}/api/students`),
+        axios.get(`${SERVER_URI}api/logs`),
+        axios.get(`${SERVER_URI}api/students`),
       ]);
       const logsWithDetails = logsRes.data.map((log, index) => {
         const student = studentsRes.data.find((s) => s.uid === log.uid) || {};
@@ -62,7 +62,7 @@ const Admin = () => {
       return alert("All fields are required!");
     }
     try {
-      await axios.post(`${SERVER_URI}/api/students`, newStudent);
+      await axios.post(`${SERVER_URI}api/students`, newStudent);
       alert("Student Added Successfully!");
       setNewStudent({ name: "", rollNo: "", uid: "", section: "" });
     } catch (error) {
@@ -72,7 +72,7 @@ const Admin = () => {
 
   const deleteEntry = async (id) => {
     try {
-      await axios.delete(`${SERVER_URI}/api/logs/${id}`);
+      await axios.delete(`${SERVER_URI}api/logs/${id}`);
       fetchLogsAndStudents();
     } catch (error) {
       console.error("Error deleting entry:", error);
