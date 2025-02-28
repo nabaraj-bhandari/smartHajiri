@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors (60%) */
+    --color-background: 226 240 246; /* #E2F0F6 - Light blue background */
+    --color-surface: 255 255 255; /* #FFFFFF - White card surfaces */
+    --color-border: 229 231 235; /* #E5E7EB - Light gray borders */
+    --color-text-primary: 17 24 39; /* #111827 - Dark text */
+
+    /* Secondary Colors (30%) */
+    --color-primary: 36 81 102; /* #274D66 - Dark blue sidebar */
+    --color-primary-light: 198 226 235; /* #C6E2EB - Lighter blue (not directly visible) */
+    --color-text-secondary: 107 114 128; /* #6B7280 - Secondary text */
+    --color-text-tertiary: 156 163 175; /* #9CA3AF - Tertiary text */
+
+    /* Accent Colors (10%) */
+    --color-accent: 241 196 27; /* #F1C41B - Yellow "Hajiri" text */
+    --color-success: 198 246 213; /* #C6F6D5 - Light green stat background */
+    --color-danger: 254 215 215; /* #FED7D7 - Light red absent background */
+    --color-warning: 254 235 200; /* #FEEBC8 - Light orange/amber */
+
+    /* Button Colors */
+    --color-btn-primary: 39 77 102; /* #274D66 - Primary button (dark blue) */
+    --color-btn-primary-hover: 30 58 77; /* #1E3A4D - Darker on hover */
+    --color-btn-secondary: 107 114 128; /* #6B7280 - Secondary button (gray) */
+    --color-btn-secondary-hover: 75 85 99; /* #4B5563 - Darker on hover */
+    --color-btn-danger: 220 38 38; /* #DC2626 - Danger button (red) */
+    --color-btn-danger-hover: 185 28 28; /* #B91C1C - Darker on hover */
+    --color-btn-success: 22 163 74; /* #16A34A - Success button (green) */
+    --color-btn-success-hover: 21 128 61; /* #15803D - Darker on hover */
+    --color-btn-warning: 217 119 6; /* #D97706 - Warning button (amber) */
+    --color-btn-warning-hover: 180 83 9; /* #B45309 - Darker on hover */
+    --color-btn-info: 37 99 235; /* #2563EB - Info button (blue) */
+    --color-btn-info-hover: 29 78 216; /* #1D4ED8 - Darker on hover */
+    --color-btn-light: 243 244 246; /* #F3F4F6 - Light button (light gray) */
+    --color-btn-light-hover: 229 231 235; /* #E5E7EB - Darker on hover */
+    --color-btn-dark: 31 41 55; /* #1F2937 - Dark button (dark gray) */
+    --color-btn-dark-hover: 17 24 39; /* #111827 - Darker on hover */
+    --color-btn-link: 59 130 246; /* #3B82F6 - Link button (blue) */
+    --color-btn-link-hover: 37 99 235; /* #2563EB - Darker on hover */
+
+    /* VIBGYOR Colors - Light Mode */
+    --color-light-violet: 221 160 221; /* #DDA0DD - Light violet */
+    --color-light-violet-text: 106 30 106; /* #6A1E6A - Dark violet for contrast */
+
+    --color-light-indigo: 179 156 255; /* #B39CFF - Light indigo */
+    --color-light-indigo-text: 43 50 91; /* #2B325B - Dark indigo for contrast */
+
+    --color-light-blue: 173 216 255; /* #ADD8FF - Light blue */
+    --color-light-blue-text: 17 24 39; /* #111827 - Dark text for contrast */
+
+    --color-light-green: 187 255 189; /* #BBFFBD - Light green */
+    --color-light-green-text: 35 97 45; /* #235D2D - Dark green for contrast */
+
+    --color-light-yellow: 255 255 181; /* #FFFFB5 - Light yellow */
+    --color-light-yellow-text: 145 104 18; /* #916818 - Dark yellow for contrast */
+
+    --color-light-orange: 255 184 112; /* #FFB870 - Light orange */
+    --color-light-orange-text: 163 89 31; /* #A3591F - Dark orange for contrast */
+
+    --color-light-red: 255 205 210; /* #FFCDD2 - Light red */
+    --color-light-red-text: 144 37 36; /* #902524 - Dark red for contrast */
+  }
+
+  .dark {
+    /* Primary Colors (60%) */
+    --color-background: 30 41 59; /* #1E293B - Dark background */
+    --color-surface: 17 24 39; /* #111827 - Dark surface color for cards */
+    --color-border: 75 85 99; /* #4B5563 - Darker borders */
+    --color-text-primary: 255 255 255; /* #FFFFFF - Light text for primary text */
+
+    /* Secondary Colors (30%) */
+    --color-primary: 30 58 77; /* #1E3A4D - Dark blue sidebar for dark mode */
+    --color-primary-light: 56 89 106; /* #38596A - Slightly lighter blue */
+    --color-text-secondary: 156 163 175; /* #9CA3AF - Light gray text for secondary text */
+    --color-text-tertiary: 199 210 223; /* #C7D2DF - Lighter tertiary text */
+
+    /* Accent Colors (10%) */
+    --color-accent: 251 191 36; /* #FBBF24 - Bright yellow for accent */
+    --color-success: 34 197 94; /* #22C55E - Green for success (lightened) */
+    --color-danger: 248 113 113; /* #F87171 - Light red for danger */
+    --color-warning: 251 146 60; /* #FB923C - Amber for warnings */
+
+    /* Button Colors */
+    --color-btn-primary: 39 77 102; /* #274D66 - Primary button (dark blue) */
+    --color-btn-primary-hover: 30 58 77; /* #1E3A4D - Darker blue on hover */
+    --color-btn-secondary: 107 114 128; /* #6B7280 - Secondary button (gray) */
+    --color-btn-secondary-hover: 75 85 99; /* #4B5563 - Darker gray on hover */
+    --color-btn-danger: 220 38 38; /* #DC2626 - Danger button (red) */
+    --color-btn-danger-hover: 185 28 28; /* #B91C1C - Darker red on hover */
+    --color-btn-success: 22 163 74; /* #16A34A - Success button (green) */
+    --color-btn-success-hover: 21 128 61; /* #15803D - Darker green on hover */
+    --color-btn-warning: 217 119 6; /* #D97706 - Warning button (amber) */
+    --color-btn-warning-hover: 180 83 9; /* #B45309 - Darker amber on hover */
+    --color-btn-info: 37 99 235; /* #2563EB - Info button (blue) */
+    --color-btn-info-hover: 29 78 216; /* #1D4ED8 - Darker blue on hover */
+    --color-btn-dark: 243 244 246; /* #F3F4F6 - Light button (light gray) */
+    --color-btn-dark-hover: 229 231 235; /* #E5E7EB - Darker light button on hover */
+    --color-btn-light: 31 41 55; /* #1F2937 - Dark button (dark gray) */
+    --color-btn-light-hover: 17 24 39; /* #111827 - Darker dark button on hover */
+    --color-btn-link: 59 130 246; /* #3B82F6 - Link button (blue) */
+    --color-btn-link-hover: 37 99 235; /* #2563EB - Darker link button on hover */
+
+    /* VIBGYOR Colors - Dark Mode */
+    --color-light-violet: 126 27 126; /* #7E1B7E - Darker violet for dark mode */
+    --color-light-violet-text: 255 221 255; /* #FFDDFF - Light violet for contrast */
+
+    --color-light-indigo: 48 39 135; /* #302787 - Darker indigo for dark mode */
+    --color-light-indigo-text: 226 234 255; /* #E2EAFF - Light indigo text for contrast */
+
+    --color-light-blue: 28 133 255; /* #1C85FF - Darker blue for dark mode */
+    --color-light-blue-text: 255 255 255; /* #FFFFFF - White text for contrast */
+
+    --color-light-green: 22 163 74; /* #16A34A - Dark green for dark mode */
+    --color-light-green-text: 233 243 233; /* #E9F3E9 - Light green text for contrast */
+
+    --color-light-yellow: 217 119 6; /* #D97706 - Darker yellow/amber for dark mode */
+    --color-light-yellow-text: 255 239 190; /* #FFEFBE - Light yellow text for contrast */
+
+    --color-light-orange: 163 83 9; /* #A35309 - Darker orange for dark mode */
+    --color-light-orange-text: 255 230 191; /* #FFE6BF - Light orange text for contrast */
+
+    --color-light-red: 185 28 28; /* #B91C1C - Darker red for dark mode */
+    --color-light-red-text: 255 221 221; /* #FFDDDD - Lighter red text for contrast */
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-colors duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-light;
+  }
+
+  .btn-danger {
+    @apply bg-danger text-white hover:bg-danger/90;
+  }
+
+  .card {
+    @apply bg-surface rounded-lg shadow-sm border p-6;
+  }
+
+  .input {
+    @apply w-full px-4 py-2 rounded-lg border bg-surface text-text-primary 
+           focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  @apply bg-background text-text-primary antialiased;
+  margin: 0;
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
