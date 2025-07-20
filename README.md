@@ -42,3 +42,17 @@ graph TD;
   API-->MongoDB;
   API-->ReactUI;
 ```
+
+---
+
+## 🎓 Credits
+
+This project was developed as part of the **Fundamentals of Electrical and Electronics Engineering (FEEE)** course  
+📚 **1st Year - 1st Part**
+
+**Contributors:**
+- 👨‍💻 Nabaraj Bhandari  
+- 👨‍💻 Nikunj Bhusal  
+- 👨‍💻 Nirdesh Joshi  
+- 👨‍💻 Nabin Gautam  
+
