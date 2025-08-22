@@ -19,7 +19,7 @@ function Dashboard() {
           <StatCard
             icon={<UserCheck className="h-4 w-4 md:h-6 md:w-6 lg:h-7 lg:w-7" />}
             title="Present Days"
-            value="16"
+            value="45"
             bgColor="bg-light-green"
           />
           <StatCard
@@ -31,13 +31,13 @@ function Dashboard() {
           <StatCard
             icon={<Percent className="h-4 w-4 md:h-6 md:w-6 lg:h-7 lg:w-7" />}
             title="Percentage"
-            value="80%"
+            value="90%"
             bgColor="bg-light-violet"
           />
           <StatCard
             icon={<Book className="h-4 w-4 md:h-6 md:w-6 lg:h-7 lg:w-7" />}
             title="Semester"
-            value="I/I"
+            value="I/II"
             bgColor="bg-light-orange"
           />
         </div>
@@ -48,9 +48,9 @@ function Dashboard() {
           Upcoming Assessments
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4">
-          <AssessmentCard date="16 Falgun" subject="Drawing" />
-          <AssessmentCard date="19 Falgun" subject="FEE" />
-          <AssessmentCard date="24 Falgun" subject="Math" />
+          <AssessmentCard date="26 Shrawan" subject="ECM" />
+          <AssessmentCard date="01 Bhadra" subject="EDC" />
+          <AssessmentCard date="04 Bhadra" subject="Math-II" />
         </div>
       </section>
 
@@ -63,7 +63,7 @@ function Dashboard() {
             <InfoRow label="Name" value="Nabaraj Bhandari" />
             <InfoRow label="Phone" value="9822339211" />
             <InfoRow label="Roll No." value="081BCT041" />
-            <InfoRow label="Semester" value="I/I" />
+            <InfoRow label="Semester" value="I/II" />
           </div>
         </div>
       </section>
